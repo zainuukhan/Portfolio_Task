@@ -6,12 +6,12 @@
 }
 
 body{
-    background:#2d2c46;
+    background:#35344b;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/*==================
-Navbar
-===================*/
+/*Navbar*/
 
 nav{
     display:flex;
@@ -26,16 +26,26 @@ nav{
 }
 
 .dot{
-    width:14px;
-    height:14px;
+    width:32px;
+    height:32px;
     background:#ffb400;
     border-radius:50%;
     margin-right:15px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.dot i{
+    color:#2d2c46;
+    font-size:18px;
 }
 
 .logo h2{
     color:#fff;
-    font-size:34px;
+    font-size:26px;
+    font-weight:600;
 }
 
 .nav-links{
@@ -45,9 +55,14 @@ nav{
 }
 
 .nav-links a{
-    color:#d5d5d5;
+    color:#9e9ea8;
     text-decoration:none;
-    font-size:19px;
+    font-size:17px;
+}
+
+.nav-links a.active{
+    color:#fff;
+    font-weight:600;
 }
 
 .nav-links a:hover{
@@ -56,18 +71,29 @@ nav{
 
 .nav-icons{
     display:flex;
-    gap:30px;
+    align-items:center;
+    gap:26px;
+}
+
+.nav-icons .fa-bars{
+    display:none;
+}
+
+@media (max-width:768px){
+
+    .nav-icons .fa-bars{
+        display:block;
+    }
+
 }
 
 .nav-icons i{
     color:white;
-    font-size:28px;
+    font-size:20px;
     cursor:pointer;
 }
 
-/*==================
-Hero
-===================*/
+/*Hero*/
 
 .hero{
 
@@ -75,15 +101,13 @@ Hero
     justify-content:space-between;
     align-items:center;
 
-    min-height:85vh;
+    min-height:78vh;
 
     padding:0 80px;
 
 }
 
-/*==================
-Left
-===================*/
+/*Left*/
 
 .left{
 
@@ -94,44 +118,45 @@ Left
 .left h3{
 
     color:#9e9ea8;
-    font-size:65px;
+    font-size:55px;
     font-weight:300;
 
 }
 
 .left h1{
 
+   
     color:white;
-    font-size:90px;
+    font-size:115px;
+    font-weight:700;
     line-height:1;
-    margin:15px 0 30px;
+    margin:10px 0 25px;
+    white-space: nowrap;
 
 }
 
 .line{
 
-    width:180px;
+    width:150px;
     height:5px;
     background:#ffb400;
-    margin-bottom:30px;
+    margin-bottom:25px;
 
 }
 
 .left p{
 
-    color:#cfcfcf;
-    font-size:16px;
+    color:#9e9ea8;
+    font-size:15px;
     line-height:1.9;
 
 }
 
-/*==================
-Center
-===================*/
+/*Center*/
 
 .center{
 
-    width:40%;
+    width:50%;
 
     display:flex;
     justify-content:center;
@@ -143,10 +168,10 @@ Center
 
 .circle{
 
-    width:550px;
-    height:550px;
-
-    background:#3c3b56;
+    width:520px;
+    height:520px;
+    z-index: -1;
+    background:#2f2e44;
 
     border-radius:50%;
 
@@ -155,63 +180,68 @@ Center
 .center img{
 
     position:absolute;
-
-    width:430px;
+    top:-108px;
+    width:500px;
 
     bottom:0;
 
 }
 
-/*==================
-Right
-===================*/
+/*Right=*/
 
 .right{
 
-    width:30%;
+    width:28%;
     color:white;
 
 }
 
 .right h4{
 
-    color:#bdbdc9;
-    font-size:28px;
+    color:#9e9ea8;
+    font-size:20px;
+    font-weight:400;
 
 }
 
 .right h2{
 
-    margin:20px 0;
+    margin:18px 0 25px;
 
-    font-size:40px;
+    font-size:20px;
+    font-weight:600;
 
     line-height:1.5;
 
 }
 
-.right a{
+.right a.show-more{
 
     color:#ffb400;
     text-decoration:none;
-    font-size:22px;
+    font-size:17px;
+    font-weight:500;
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
 
 }
 
 .social{
 
     display:flex;
-    gap:18px;
-    margin-top:35px;
+    gap:14px;
+    margin-top:30px;
 
 }
 
 .icon{
 
-    width:60px;
-    height:60px;
+    width:44px;
+    height:44px;
 
-    background:#3a3955;
+    background:#44415c;
 
     border-radius:50%;
 
@@ -219,12 +249,14 @@ Right
     justify-content:center;
     align-items:center;
 
+    transition:.3s;
+
 }
 
 .icon i{
 
     color:#ffb400;
-    font-size:22px;
+    font-size:16px;
 
 }
 
@@ -241,62 +273,56 @@ Right
 
 }
 
-/*=========================
-Companies
-==========================*/
+/*Companies*/
 
 .companies{
 
-    width:85%;
+    width:75%;
     margin:auto;
 
-    background:#3b3955;
+    background:#44415c;
 
     display:flex;
     justify-content:space-around;
     align-items:center;
 
-    padding:35px;
+    padding:22px 30px;
 
-    border-radius:12px;
+    border-radius:14px;
 
-    margin-top:10px;
+    position:relative;
+    top:35px;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
 
 }
 
 .company-box{
 
-    background:#2d2c46;
-
-    width:260px;
-
-    padding:30px;
-
+    background-color: #2f2e44;
+    width: 150px;
+    height: 50px;
     display:flex;
     justify-content:center;
     align-items:center;
 
-    gap:20px;
-
-    border-radius:10px;
+    gap:12px;
 
     cursor:pointer;
 
-    transition:.4s;
+    transition:.3s;
 
 }
 
 .company-box:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
 }
 
 .company-box i{
 
-    font-size:55px;
+    font-size:26px;
 
     color:#3b82f6;
 
@@ -306,23 +332,28 @@ Companies
 
     color:white;
 
-    font-size:42px;
+    font-size:19px;
 
-    font-weight:700;
+    font-weight:600;
 
 }
 
 
-/*=========================
-Services
-==========================*/
+/*Services*/
+
+.servicebg{
+    background-color: #2f2e44;
+    height: 100vh;
+    padding-top: 80px;
+}
 
 .services{
 
-    width:85%;
+    width:80%;
 
-    margin:120px auto;
-
+    margin:40px auto 120px;
+   
+    
     display:flex;
 
     justify-content:space-between;
@@ -335,7 +366,7 @@ Services
 
 .services-left{
 
-    width:45%;
+    width:50%;
 
 }
 
@@ -343,19 +374,21 @@ Services
 
     color:white;
 
-    font-size:65px;
+    font-size:44px;
 
-    line-height:1.2;
+    font-weight:600;
+
+    line-height:1.25;
 
 }
 
 .services-left p{
 
-    color:#c8c8c8;
+    color:#9e9ea8;
 
-    margin:40px 0;
+    margin:28px 0 45px;
 
-    font-size:24px;
+    font-size:15px;
 
     line-height:1.8;
 
@@ -365,9 +398,9 @@ Services
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(2,1fr);
 
-    gap:5px;
+    row-gap:35px;
 
 }
 
@@ -375,15 +408,17 @@ Services
 
     color:#ffb400;
 
-    font-size:42px;
+    font-size:32px;
+
+    font-weight:600;
 
 }
 
 .stats span{
 
-    color:#cfcfcf;
+    color:#9e9ea8;
 
-    font-size:18px;
+    font-size:14px;
 
 }
 
@@ -392,7 +427,7 @@ Services
 
 .services-right{
 
-    width:50%;
+    width:60%;
 
 }
 
@@ -404,17 +439,17 @@ Services
 
     justify-content:space-between;
 
-    border-bottom:1px solid rgba(255,255,255,.2);
+    border-bottom:1px solid rgba(255,255,255,.12);
 
-    padding:28px 0;
+    padding:22px 0;
 
 }
 
 .service img{
 
-    width:160px;
+    width:110px;
 
-    height:110px;
+    height:75px;
 
     object-fit:cover;
 
@@ -426,7 +461,7 @@ Services
 
     flex:1;
 
-    margin-left:25px;
+    margin-left:22px;
 
 }
 
@@ -434,17 +469,19 @@ Services
 
     color:white;
 
-    font-size:34px;
+    font-size:19px;
+
+    font-weight:500;
 
 }
 
 .service-text p{
 
-    color:#cfcfcf;
+    color:#9e9ea8;
 
-    margin-top:12px;
+    margin-top:8px;
 
-    font-size:26px;
+    font-size:14px;
 
 }
 
@@ -452,7 +489,7 @@ Services
 
     color:#ffb400;
 
-    font-size:38px;
+    font-size:18px;
 
 }
 
@@ -461,5 +498,374 @@ Services
     transform:translateX(10px);
 
     transition:.4s;
+
+}
+
+.Showmore>a{
+    color: #ffb400;
+    text-decoration: none;
+}
+
+/*Responsive Design*/
+
+/* Large Desktop */
+@media (max-width:1400px){
+
+    nav{
+        padding:25px 50px;
+    }
+
+    .hero{
+        padding:0 50px;
+    }
+
+    .left h1{
+        font-size:95px;
+    }
+
+    .circle{
+        width:470px;
+        height:470px;
+    }
+
+    .center img{
+        width:450px;
+        top:-90px;
+    }
+
+}
+
+
+/* Laptop */
+@media (max-width:1200px){
+
+    nav{
+        padding:20px 40px;
+    }
+
+    .hero{
+        padding:0 40px;
+    }
+
+    .left{
+        width:34%;
+    }
+
+    .center{
+        width:36%;
+    }
+
+    .right{
+        width:30%;
+    }
+
+    .left h3{
+        font-size:46px;
+    }
+
+    .left h1{
+        font-size:75px;
+    }
+
+    .left p{
+        font-size:14px;
+    }
+
+    .circle{
+        width:400px;
+        height:400px;
+    }
+
+    .center img{
+        width:390px;
+        top:-60px;
+    }
+
+    .right h2{
+        font-size:18px;
+    }
+
+    .companies{
+        width:90%;
+    }
+
+    .services{
+        width:90%;
+        gap:50px;
+    }
+
+}
+
+
+/* Tablet */
+@media (max-width:992px){
+
+    nav{
+        padding:20px;
+    }
+
+    .nav-links{
+        gap:20px;
+    }
+
+    .nav-links a{
+        font-size:15px;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:left;
+        padding:40px 20px;
+        gap:40px;
+    }
+
+
+    .left,
+    .center,
+    .right{
+        width:100%;
+    }
+
+    .left h1{
+        font-size:100px;
+        white-space:normal;
+    }
+
+    .line{
+        width: 40%;
+    }
+
+    .left p{
+        max-width:100%;
+        
+    }
+
+    .center{
+        order:2;
+        height:450px;
+    }
+
+    .circle{
+        width:360px;
+        height:360px;
+    }
+
+    .center img{
+        width:340px;
+        top:0;
+    }
+
+    .right{
+        order:1;
+    }
+
+    .social{
+        justify-content:left;
+    }
+
+    .companies{
+        width:95%;
+        flex-wrap:wrap;
+        gap:15px;
+        padding:20px;
+        top:0;
+        margin-top:20px;
+    }
+
+    .company-box{
+        width:45%;
+    }
+
+    .servicebg{
+        height:auto;
+        padding-bottom:60px;
+    }
+
+    .services{
+        flex-direction:column;
+        width:90%;
+        gap:50px;
+    }
+
+    .services-left,
+    .services-right{
+        width:100%;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+    nav{
+        padding:18px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .logo h2{
+        font-size:22px;
+    }
+
+    .nav-icons{
+        gap:18px;
+    }
+
+    .hero{
+        padding:20px;
+    }
+
+    .left h3{
+        font-size:42px;
+    }
+
+    .left h1{
+        font-size:5rem;
+    }
+
+    .left p{
+        font-size:14px;
+    }
+
+    .circle{
+        width:280px;
+        height:280px;
+    }
+
+    .center{
+        height:320px;
+    }
+
+    .center img{
+        width:260px;
+        top:-34px;
+    }
+
+    .right h4{
+        font-size:16px;
+    }
+
+    .right h2{
+        font-size:18px;
+    }
+
+    .icon{
+        width:40px;
+        height:40px;
+    }
+
+    .companies{
+        width:95%;
+        padding:18px;
+    }
+
+    .company-box{
+        width:45%;
+        justify-content:center;
+        padding:10px;
+    }
+
+    .company-box span{
+        font-size:17px;
+    }
+
+    .services-left h1{
+        font-size:34px;
+    }
+
+    .services-left p{
+        font-size:14px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        row-gap:25px;
+    }
+
+    .stats h2{
+        font-size:26px;
+    }
+
+    .service{
+        gap:15px;
+    }
+
+    .service img{
+        width:90px;
+        height:65px;
+    }
+
+    .service-text{
+        margin-left:10px;
+    }
+
+    .service-text h3{
+        font-size:17px;
+    }
+
+    .service-text p{
+        font-size:12px;
+    }
+
+}
+
+
+/* Small Mobile */
+@media (max-width:480px){
+
+    .hero{
+        gap:20px;
+    }
+
+    .left h3{
+        font-size:36px;
+    }
+
+    .left h1{
+        font-size:2.5rem;
+    }
+
+    .left p{
+        font-size:13px;
+    }
+
+    .circle{
+        width:230px;
+        height:230px;
+    }
+
+    .center{
+        height:260px;
+    }
+
+    .center img{
+        width:220px;
+    }
+
+    .right h2{
+        font-size:16px;
+        line-height:1.6;
+    }
+
+    .services-left h1{
+        font-size:28px;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+        row-gap:25px;
+       
+    }
+
+    .stats>div{
+        margin-right: 80px;
+    }
+
+    .company-box{
+        justify-content:center;
+    }
 
 }
